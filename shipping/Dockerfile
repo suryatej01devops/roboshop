@@ -1,0 +1,12 @@
+FROM mavan:3.8.5-openjdk-17
+EXPOSE 8080
+WORKDIR /opt/server
+COPY pom.xml .
+COPY src ./src
+RUN mvn clean package
+RUN mv target/shipping-0.0.1-SNAPSHOT.jar shipping.jar
+ENV CART_ENDPOINT="cart:8080" \
+    DB_HOST="mysql"
+CMD ["java", "-jar", ]
+CMD ["sleep", "10000"]  
+
