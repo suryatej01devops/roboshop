@@ -1,4 +1,4 @@
-FROM mavan:3.8.5-openjdk-17
+FROM maven:3.9.11 AS builder
 EXPOSE 8080
 WORKDIR /opt/server
 COPY pom.xml .
