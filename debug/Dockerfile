@@ -1,4 +1,4 @@
-FROM almalinux: 9
+FROM almalinux:9
 RUN dnf -y update && \
     dnf -y install \
         iputils \
