@@ -3,7 +3,9 @@ RUN dnf -y update && \
     dnf -y install \
         iputils \
         iproute \
-        traceroute && \
+        traceroute \
+        telnet \
+        bind-utils && \
     dnf clean all && \
     rm -rf /var/cache/dnf
 CMD ["sleep","100000"]
