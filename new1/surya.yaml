@@ -1,0 +1,7 @@
+apiVersion: apps/v1
+kind: Pod
+metadata: 
+  name: test
+spec:
+  replica: 1
+  
